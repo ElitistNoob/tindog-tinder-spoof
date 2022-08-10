@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+}
+
+img {
+    max-width: 100%;
+}
+
+/* === Typography === */
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8f8f8;
+  margin-bottom: 0.25em;
+}
+
+p {
+  font-size: 1rem; 
+  font-weight: 400;
+  color: #b7b7b7;
+  margin: 0; 
+  line-height: 1.5;
+}
+
+
+/* === Button === */
+
+.paw-btn {
+    position: relative;
+    width: 100%;
+    background-image: url('images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.paw-btn:active {
+    transform: scale(0.96);
+    left: -1px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    gap: .25em;
+}
+
+.btn {
+    height: 5.125rem;
+    width: 40%;
+    background-color: #fff;
+    border: none;
+    box-shadow: 0px 10px 20px #E9E9EA;
+    background-size: 2rem;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+#nope-btn {
+    border-radius: 50px 0 0 50px;
+    background-image: url('images/icon-cross.png'); 
+}
+
+#nope-btn:hover,
+#nope-btn:active {
+    background-color: #FFE7EF;;
+}
+
+#like-btn {
+    border-radius: 0 50px 50px 0;
+    background-image: url('images/icon-heart.png');  
+}
+
+#like-btn:hover,
+#like-btn:active {
+    background-color: #DBFFF4;
+}
+
+/* === Utilities === */
+
+/* === Layout === */
+
+.container {
+    max-width: 420px;
+    margin-inline: auto;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+    padding: 0 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5rem
+}
+
+nav img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+#dog-profile {
+    position: relative; 
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.badge {
+    position: absolute;
+    width: 50%;
+    top: calc(5% + 1em);
+    left: 1em;
+    transform: rotate(-25deg);
+    z-index: 10;
+}
+
+.dog-profile__img {
+    border-radius: 15px;
+    animation: pictureMovement 1s ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes pictureMovement {
+    0% {
+      transform: scale(1);  
+    }
+    100% {
+      transform: scale(1.02);  
+    }
+}
+
+.dog-profile__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding:  0 2.5em 1.5em 1.5em;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1)); 
+}
